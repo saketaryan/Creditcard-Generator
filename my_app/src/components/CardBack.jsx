@@ -1,6 +1,9 @@
 import React from 'react'
+import "./Card.css";
 
-const CardBack = () => {
+const CardBack = (props) => {
+
+    const {cvc} = props.card;
   return (
     <>
         <div className='card card-back rounded-md'>
@@ -12,7 +15,7 @@ const CardBack = () => {
             <div className='lower flex justify-center'>
                 <div className='w-80'>
                     <div className='gbar bg-gray'>
-                        000
+                        {cvc}
                     </div>
                 </div>
             </div>

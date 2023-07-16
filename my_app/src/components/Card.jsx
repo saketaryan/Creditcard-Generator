@@ -1,6 +1,8 @@
 import React from 'react'
+import "./Card.css";
 
-const Card = () => {
+const Card = (props) => {
+    const {name, cardNumber, MM, YY} = props.card;
   return (
     <>
         <div className='card rounded-md'>
@@ -15,11 +17,11 @@ const Card = () => {
             <div className='lower h-40 flex justify-center'>
                 <div className='w-80'>
                 <div className='text-center text-xl ls-4'>
-                    0000 0000 0000 0000
+                    {cardNumber}
                 </div>
                 <div className='flex justify-between w-100'>
-                    <h5 className='details'>JANE APPRATHEID</h5>
-                    <h5 className='details'>12/24</h5>
+                    <h5 className='details'>{name}</h5>
+                    <h5 className='details'>{MM}/{YY}</h5>
                 </div>
                 </div>
             </div>

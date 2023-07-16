@@ -1,0 +1,47 @@
+.card{
+    width: 28rem;
+    height: 15rem;
+    background-image: url("../assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.card-back{
+    background-image: none;
+    background-color: rgb(187, 187, 187);
+    padding: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.gbar{
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.2rem;
+    color: lightgray;
+}
+
+.card-back .bar{
+    width: 40rem;
+    color: #000;
+    user-select: none;
+    margin: 0.7rem -2rem;;
+}
+
+.card .details{
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.card upper{
+    padding: 3rem;
+}
+
+.card lower{
+    padding: 3rem;
+}
