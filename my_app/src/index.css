@@ -1,3 +1,150 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=IBM+Plex+Mono:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+
+}
+
+.card{
+    width: 28rem;
+    height: 15rem;
+    background-image: url("./assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.card-back{
+    background-image: none;
+    background-color: rgb(187, 187, 187);
+    padding: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.gbar{
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.2rem;
+    color: lightgray;
+}
+
+.card-back .bar{
+    width: 40rem;
+    color: #000;
+    user-select: none;
+    margin: 0.7rem -2rem;;
+}
+
+.card .details{
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.card upper{
+    padding: 3rem;
+}
+
+.card lower{
+    padding: 3rem;
+}
+
+.border{
+    border: 1px red solid;
+}
+
+.rounded-md{
+    border-radius: 8px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.h-50{
+    height: 50%;
+}
+
+.h-60{
+    height: 60%;
+}
+
+.h-40{
+    height: 40%;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-xl{
+    font-size: x-large;
+}
+
+.ls-4{
+    letter-spacing: 4px;
+}
+
+.rounded-full{
+    border-radius: 100%;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.border-white{
+    border: 2px solid white;
+}
+
+.w-3r{
+    width: 3rem;
+}
+
+.h-3r{
+    height: 3rem;
+}
+
+.w-2r{
+    width: 2rem;
+}
+
+.h-2r{
+    height: 2rem;
+}
+
+.mt-2{
+    margin-top: 1rem;
+}
+
+.m-1{
+    margin: 0.5rem;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.bg-gray{
+    background-color: rgb(154, 154, 154);
+}

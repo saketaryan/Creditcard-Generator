@@ -1,9 +1,14 @@
+import Card from "./components/Card";
+import CardBack from "./components/CardBack";
 
 
 function App() {
   return (
      <>
-     <h1>HII</h1>
+      <div className="">
+        <Card />
+        <CardBack />
+      </div>
     </>
   );
 }
