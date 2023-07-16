@@ -1,9 +1,12 @@
 import React, { useRef } from "react";
 import "./Form.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = (props) => {
 
     const updateCardValue = props.updateCardValue;
+    const notify = (msg, type)=> toast(msg, {type: type});
 
     const nameRef = useRef(null);
     const cardNumberRef = useRef(null);
@@ -13,12 +16,12 @@ const Form = (props) => {
 
     const validation = (name, cardNumber, mm, yy, cvc)=>{
         if(name.length<8) {
-            alert('Name length is too short!');
+            notify('Name length is too short!', "error");
             return false;
         }
 
         if(cardNumber.length!==20){
-            alert('Card Number Not Valid!');
+            notify('Card Number Not Valid!', "error");
             return false;
         }
 
@@ -27,19 +30,19 @@ const Form = (props) => {
         const month = parseInt(mm, 10);
     
         if (isNaN(month) || month < 1 || month > 12) {
-            alert('Invalid month!');
+            notify('Invalid month!', "error");
             return false;
         }
     
         const year = parseInt(yy, 10);
     
         if (isNaN(year) || year < currentYear || year > currentYear + 10) {
-            alert('Invalid year!');
+            notify('Invalid year!', "error");
             return false;
         }
 
         if(cvc>999||cvc<100){
-            alert("Invalid CVC!");
+            notify("Invalid CVC!", "error");
             return false;
         }
 
@@ -55,12 +58,19 @@ const Form = (props) => {
         const mm = mmRef.current.value;
         const yy = yyRef.current.value;
         const cvc = cvcRef.current.value;
-        if(!validation(name, cardNumber, mm, yy, cvc)) return;
+        if(!validation(name, cardNumber, mm, yy, cvc)) {
+          return;
+        }
         updateCardValue(name,cardNumber,mm,yy,cvc);
+        notify("Credit Card Updated!", "success");
     }
 
   return (
     <>
+      <ToastContainer
+      position="top-right"
+      autoClose={2000}
+      />
       <div className="w-50">
         <div className="flex-col det">
           <label for="fname">CARDHOLDER NAME</label>
